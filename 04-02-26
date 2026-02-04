@@ -1,0 +1,41 @@
+/using class book to input and display book detailes for 3 books using array of objects
+//atributes:id,name,price,author
+#include <iostream>
+using namespace std;
+class book
+{
+    private:
+    int id;
+    string name;
+    float price;
+    string author;
+    public:
+    void getdata();
+    void display();
+};
+void book::getdata()
+{
+    cout<<"enter id,name,price,author:";
+    cin>>id>>name>>price>>author;
+}
+void book::display()
+{
+    cout<<"id:"<<id<<endl;
+    cout<<"name:"<<name<<endl;
+    cout<<"price:"<<price<<endl;
+    cout<<"author:"<<author<<endl;
+}
+int main()
+{
+    book b[3];
+    for(int i=0;i<3;i++)
+    {
+        b[i].getdata();
+    }
+    cout<<"book details are:"<<endl;
+    for(int i=0;i<3;i++)
+    {
+        b[i].display();
+    }
+    return 0;
+}
